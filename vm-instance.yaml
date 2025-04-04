@@ -1,0 +1,15 @@
+resources:
+- name: my-vm-instance
+  type: compute.v1.instance
+  properties:
+    zone: us-central1-b
+    machineType: zones/us-central1-b/machineTypes/e2-medium
+    disks:
+    - boot: true
+      autoDelete: true
+      initializeParams:
+        sourceImage: projects/debian-cloud/global/images/family/debian-11
+    networkInterfaces:
+    - network: global/networks/default
+
+
